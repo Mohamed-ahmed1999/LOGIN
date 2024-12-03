@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>LOGIN</title>
+</head>
+
+<body>
+    
+    <div class="section1 pt-5 text-center d-block">
+        <div class="container">
+            <div class="box m-auto p-5">
+                <h1>Smart Login System</h1>
+
+                <input type="email" id="loginEmail" class="form-control my-3" placeholder="Enter your email" required>
+                <input type="password" id="loginPassword" class="form-control my-3" placeholder="Enter your password"
+                    required>
+
+                <p id="loginError" class="text-danger d-none">All inputs are required</p>
+
+                <button onclick="Login()" class="btn btn-outline-info w-100 my-3">Login</button>
+                <p class="text-white">Don't have an account? <a class="text-white signup-link" href="#"
+                        onclick="nextSection('signup')">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section2 pt-5 text-center d-none">
+        <div class="container">
+            <div class="box m-auto p-5">
+                <h1>Smart Login System</h1>
+
+                <input type="text" id="signupName" class="form-control my-3" placeholder="Enter your name" required>
+                <input type="email" id="signupEmail" class="form-control my-3" placeholder="Enter your email" required>
+                <input type="password" id="signupPassword" class="form-control my-3" placeholder="Enter your password"
+                    required>
+
+                <p id="signupError" class="text-danger d-none">All inputs are required</p>
+                <p id="signupSuccess" class="text-success d-none">success</p>
+                
+                <button onclick="Signup()"
+                    class="btn btn-outline-info w-100 my-3">Sign Up</button>
+                <p class="text-white">Already have an account? <a class="text-white signin-link" href="#"
+                        onclick="nextSection('login')">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-expand-lg d-none">
+        <div class="container ">
+            <a class="navbar-brand text-white" href="#">SMART LOGIN</a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav pt-2 ">
+                    <li class="nav-item  btn btn-outline-warning">
+                        <a class="nav-link active text-center text-white " aria-current="page" href="#"
+                            onclick="click_Logout()">Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="box3 container my-5 text-center w-75 d-none">
+        <div class="group m-auto p-5 ">
+            <h1>Welcome, <span id="userName"></span>!</h1>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
